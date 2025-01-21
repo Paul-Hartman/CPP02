@@ -53,3 +53,52 @@ std::ostream& operator<<(std::ostream& out, const Fixed &fixed){
 	return out;
 }
 
+bool Fixed::operator>(const Fixed &fixed) const{
+	return _value > fixed._value;
+}
+
+bool Fixed::operator<(const Fixed &fixed) const{
+	return _value < fixed._value;
+}
+
+bool Fixed::operator>=(const Fixed &fixed) const{
+	return _value >= fixed._value;
+}
+
+bool Fixed::operator<=(const Fixed &fixed) const{
+	return _value <= fixed._value;
+}
+
+bool Fixed::operator==(const Fixed &fixed) const{
+	return _value == fixed._value;
+}
+
+bool Fixed::operator!=(const Fixed &fixed) const{
+	return _value != fixed._value;
+}
+
+Fixed Fixed::operator+(const Fixed &fixed) const{
+	return (Fixed(this->_value + fixed._value));
+} 
+
+Fixed Fixed::operator*(const Fixed &fixed) const{
+	Fixed tmp = Fixed(this->_value * fixed._value);
+	tmp._value = tmp._value >> (_bits * 2);
+	return tmp;
+} 
+
+Fixed& Fixed::operator++()
+{
+	_value++;
+	return *this;
+}
+
+Fixed Fixed::operator++(int)
+{
+	Fixed tmp(*this);
+	++(*this);
+	return tmp;
+}
+
+
+
