@@ -6,7 +6,7 @@
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 16:44:42 by phartman          #+#    #+#             */
-/*   Updated: 2025/01/21 15:30:29 by phartman         ###   ########.fr       */
+/*   Updated: 2025/01/21 16:56:15 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,12 @@ public:
 	void setRawBits(int const raw);
 	float toFloat(void) const;
 	int toInt(void) const;
-	
 
+	static Fixed& min(Fixed &a, Fixed &b);
+	static const Fixed& min(const Fixed &a, const Fixed &b);
+	static Fixed& max(Fixed &a, Fixed &b);
+	static const Fixed& max(const Fixed &a, const Fixed &b);
+	
 private:
 	int _value;
 	static const int _bits = 8;

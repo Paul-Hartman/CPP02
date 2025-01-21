@@ -79,13 +79,25 @@ bool Fixed::operator!=(const Fixed &fixed) const{
 
 Fixed Fixed::operator+(const Fixed &fixed) const{
 	return (Fixed(this->_value + fixed._value));
-} 
+}
+
+Fixed Fixed::operator-(const Fixed &fixed) const{
+	return (Fixed(this->_value - fixed._value));
+}
 
 Fixed Fixed::operator*(const Fixed &fixed) const{
 	Fixed tmp = Fixed(this->_value * fixed._value);
-	tmp._value = tmp._value >> (_bits * 2);
+	tmp._value = tmp._value >> (_bits *2);
 	return tmp;
-} 
+}
+
+Fixed Fixed::operator/(const Fixed &fixed) const{
+	int num = this->_value << _bits;
+	Fixed tmp = Fixed(num / fixed._value);
+	//tmp._value = tmp._value >> (_bits / 2);
+	return tmp;
+}
+
 
 Fixed& Fixed::operator++()
 {
@@ -99,6 +111,24 @@ Fixed Fixed::operator++(int)
 	++(*this);
 	return tmp;
 }
+
+Fixed& Fixed::operator--()
+{
+	_value--;
+	return *this;
+}
+
+Fixed Fixed::operator--(int)
+{
+	Fixed tmp(*this);
+	--(*this);
+	return tmp;
+}
+
+
+
+
+
 
 
 
