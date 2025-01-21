@@ -6,13 +6,14 @@
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 16:44:42 by phartman          #+#    #+#             */
-/*   Updated: 2025/01/20 17:11:45 by phartman         ###   ########.fr       */
+/*   Updated: 2025/01/21 12:51:52 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
+
 class Fixed {
 
 public:
@@ -27,6 +28,7 @@ public:
 
 private:
 	int _value;
+	static const int _bits = 8;
 
-}
+};
 
