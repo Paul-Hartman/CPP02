@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/22 14:31:33 by phartman          #+#    #+#             */
+/*   Updated: 2025/01/22 14:34:05 by phartman         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Fixed.hpp"
 
 Fixed::Fixed() : _value(0) {
@@ -130,6 +142,24 @@ Fixed Fixed::operator--(int)
 	--(*this);
 	return tmp;
 }
+
+Fixed& Fixed::min(Fixed &a, Fixed &b){
+	return a < b ? a : b;
+}
+
+const Fixed& Fixed::min(const Fixed &a, const Fixed &b){
+	return a < b ? a : b;
+}
+
+Fixed& Fixed::max(Fixed &a, Fixed &b){
+	return a > b ? a : b;
+}
+
+const Fixed& Fixed::max(const Fixed &a, const Fixed &b){
+	return a > b ? a : b;
+}
+
+
 
 
 
