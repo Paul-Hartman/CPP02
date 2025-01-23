@@ -1,6 +1,6 @@
 NAME := fixed
 CC := c++
-CFLAGS := -Wall -Wextra -Werror -std=c++98
+CFLAGS := -Wall -Wextra -Werror -std=c++98 -g -O0
 OBJDIR = objs
 SRCS = Fixed.cpp main.cpp Point.cpp bsp.cpp
 OBJS := $(patsubst %.cpp, $(OBJDIR)/%.o, $(SRCS))

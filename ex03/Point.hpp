@@ -6,7 +6,7 @@
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 15:25:21 by phartman          #+#    #+#             */
-/*   Updated: 2025/01/22 17:30:36 by phartman         ###   ########.fr       */
+/*   Updated: 2025/01/23 15:18:54 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ class Point{
 		Point(const float x, const float y);
 		Point& operator=(const Point &copy);
 		~Point();
+
+		friend void swap(Point &a, Point &b);
 
 		const Fixed getX() const;
 		const Fixed getY() const;
