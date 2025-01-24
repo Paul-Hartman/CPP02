@@ -20,10 +20,10 @@ Fixed sideOfLine(Point const a, Point const b, Point const point);
 bool bsp(Point const a, Point const b, Point const c, Point const point);
 
 int main( void ) {
-	Point a = Point(0, 0);
-	Point b = Point(0, 1);
-	Point c = Point(-1, 0);
-	Point point = Point(0, 0);
+	Point a = Point(1, 1);
+	Point b = Point(4, 1);
+	Point c = Point(2, 5);
+	Point point = Point(2, 3);
 	if (bsp(a, b, c, point)){
 		std::cout << "Point is inside the triangle" << std::endl;
 	}
