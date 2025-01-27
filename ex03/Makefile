@@ -3,12 +3,10 @@ CC := c++
 CFLAGS := -Wall -Wextra -Werror -std=c++98 -g -O0
 OBJDIR = objs
 SRCS = Fixed.cpp main.cpp Point.cpp bsp.cpp
-OBJS := $(patsubst %.cpp, $(OBJDIR)/%.o, $(SRCS))
+OBJS := $(SRCS:%.cpp=$(OBJDIR)/%.o)
 
-$(OBJDIR):
+$(OBJDIR)/%.o: %.cpp
 	mkdir -p $(OBJDIR)
-
-$(OBJDIR)/%.o: %.cpp | $(OBJDIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
