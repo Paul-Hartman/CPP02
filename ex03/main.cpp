@@ -6,7 +6,7 @@
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 14:31:36 by phartman          #+#    #+#             */
-/*   Updated: 2025/01/23 16:50:46 by phartman         ###   ########.fr       */
+/*   Updated: 2025/01/27 13:12:43 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,7 @@
 #include "Fixed.hpp"
 //#include "bsp.cpp"
 
-Fixed sideOfLine(Point const a, Point const b, Point const point);
 
-bool bsp(Point const a, Point const b, Point const c, Point const point);
 
 int main( void ) {
 	Point a = Point(1, 1);
