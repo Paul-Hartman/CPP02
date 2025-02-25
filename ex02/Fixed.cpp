@@ -6,33 +6,33 @@
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 14:31:33 by phartman          #+#    #+#             */
-/*   Updated: 2025/01/22 14:34:05 by phartman         ###   ########.fr       */
+/*   Updated: 2025/02/25 18:02:34 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
 Fixed::Fixed() : _value(0) {
-	std::cout << "Default constructor called" << std::endl;
+	//std::cout << "Default constructor called" << std::endl;
 };
 
 Fixed::Fixed(const Fixed &copy) {
-	std::cout << "Copy constructor called" << std::endl;
+	//std::cout << "Copy constructor called" << std::endl;
 	*this = copy;
 };
 
 Fixed::Fixed(const int value) {
-	std::cout << "Int constructor called" << std::endl;
+	//std::cout << "Int constructor called" << std::endl;
 	_value = value << _bits;
 };
 
 Fixed::Fixed(const float value){
-	std::cout << "Float constructor called" << std::endl;
+	//std::cout << "Float constructor called" << std::endl;
 	_value = static_cast<int>(roundf(value * (1 << _bits)));
 };
 
 Fixed& Fixed::operator=(const Fixed &copy) {
-	std::cout << "Copy assignment operator called" << std::endl;
+	//std::cout << "Copy assignment operator called" << std::endl;
 	if(this != &copy){
 		_value = copy._value;
 	}
@@ -40,7 +40,7 @@ Fixed& Fixed::operator=(const Fixed &copy) {
 }
 
 Fixed::~Fixed() {
-	std::cout << "Destructor called" << std::endl;
+	//std::cout << "Destructor called" << std::endl;
 };
 
 int Fixed::getRawBits(void) const{
@@ -90,16 +90,14 @@ bool Fixed::operator!=(const Fixed &fixed) const{
 }
 
 Fixed Fixed::operator+(const Fixed &fixed) const{
-	int result = this->_value + fixed._value;
-	Fixed tmp = Fixed();
-	tmp._value = result;
+	Fixed tmp;
+	tmp._value = this->_value + fixed._value;
 	return (tmp);
 }
 
 Fixed Fixed::operator-(const Fixed &fixed) const{
-	int result = this->_value - fixed._value;
-	Fixed tmp = Fixed();
-	tmp._value = result;
+	Fixed tmp;
+	tmp._value = this->_value - fixed._value;
 	return (tmp);
 }
 

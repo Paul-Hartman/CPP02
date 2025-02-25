@@ -6,11 +6,13 @@
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 16:44:42 by phartman          #+#    #+#             */
-/*   Updated: 2025/01/21 12:51:52 by phartman         ###   ########.fr       */
+/*   Updated: 2025/02/25 16:49:57 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
+#ifndef FIXED_HPP
+#define FIXED_HPP
 
 #include <iostream>
 
@@ -31,4 +33,4 @@ private:
 	static const int _bits = 8;
 
 };
-
+#endif

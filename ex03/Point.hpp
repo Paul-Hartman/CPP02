@@ -6,7 +6,7 @@
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 15:25:21 by phartman          #+#    #+#             */
-/*   Updated: 2025/01/27 13:13:01 by phartman         ###   ########.fr       */
+/*   Updated: 2025/02/04 16:24:05 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,6 @@ class Point{
 
 		const Fixed getX() const;
 		const Fixed getY() const;
-
-		Fixed sideOfLine(Point const a, Point const b, Point const point);
-
-		bool bsp(Point const a, Point const b, Point const c, Point const point);
 
 	private:
 		const Fixed _x;

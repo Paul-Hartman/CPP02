@@ -6,16 +6,15 @@
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 14:31:36 by phartman          #+#    #+#             */
-/*   Updated: 2025/01/27 13:12:43 by phartman         ###   ########.fr       */
+/*   Updated: 2025/02/04 16:29:16 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Point.hpp"
 #include "Fixed.hpp"
-//#include "bsp.cpp"
 
-
+bool bsp(Point const a, Point const b, Point const c, Point const point);
 
 int main( void ) {
 	Point a = Point(1, 1);
@@ -28,10 +27,5 @@ int main( void ) {
 	else{
 		std::cout << "Point is outside the triangle" << std::endl;
 	}
-	
-	
-	
-	
-	
 	return 0;
 }
