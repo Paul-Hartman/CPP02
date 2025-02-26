@@ -6,7 +6,7 @@
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 14:31:33 by phartman          #+#    #+#             */
-/*   Updated: 2025/02/25 18:02:34 by phartman         ###   ########.fr       */
+/*   Updated: 2025/02/26 14:13:15 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,12 +101,14 @@ Fixed Fixed::operator-(const Fixed &fixed) const{
 	return (tmp);
 }
 
+//shift to remove the fractional bits added by multiplication
 Fixed Fixed::operator*(const Fixed &fixed) const{
 	Fixed tmp = Fixed(this->_value * fixed._value);
 	tmp._value = tmp._value >> (_bits *2);
 	return tmp;
 }
 
+//shift left before division to maintain precision then shift back
 Fixed Fixed::operator/(const Fixed &fixed) const{
 
 	Fixed tmp = Fixed((this->_value << _bits) / fixed._value);

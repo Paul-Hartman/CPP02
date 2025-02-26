@@ -6,7 +6,7 @@
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 14:31:36 by phartman          #+#    #+#             */
-/*   Updated: 2025/02/25 18:41:01 by phartman         ###   ########.fr       */
+/*   Updated: 2025/02/26 13:25:18 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,5 @@ int main( void ) {
 	testDecrement();
 	testMinMax();
 	
-
 	return 0;
-
 }
